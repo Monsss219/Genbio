@@ -18,416 +18,133 @@
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html { scroll-behavior: smooth; }
-  body {
-    background: var(--white);
-    color: var(--black);
-    font-family: 'Outfit', sans-serif;
-    font-weight: 300;
-    line-height: 1.6;
-    min-height: 100vh;
-  }
-
-  /* NAV */
-  nav {
-    position: fixed; top: 0; left: 0; right: 0;
-    display: flex; justify-content: space-between; align-items: center;
-    padding: 1.2rem 3rem;
-    background: rgba(248,246,241,0.92);
-    backdrop-filter: blur(12px);
-    border-bottom: 0.5px solid var(--border);
-    z-index: 100;
-  }
-  .logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 22px;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    color: var(--black);
-    text-decoration: none;
-  }
+  body { background: var(--white); color: var(--black); font-family: 'Outfit', sans-serif; font-weight: 300; line-height: 1.6; }
+  nav { position: fixed; top: 0; left: 0; right: 0; display: flex; justify-content: space-between; align-items: center; padding: 1.2rem 3rem; background: rgba(248,246,241,0.92); backdrop-filter: blur(12px); border-bottom: 0.5px solid var(--border); z-index: 100; }
+  .logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: var(--black); text-decoration: none; }
   .logo span { color: var(--accent); }
-  .nav-cta {
-    background: var(--black);
-    color: var(--white);
-    padding: 8px 20px;
-    border-radius: 100px;
-    font-size: 13px;
-    font-weight: 400;
-    text-decoration: none;
-    letter-spacing: 0.03em;
-    transition: opacity 0.2s;
-    cursor: pointer;
-    border: none;
-  }
+  .nav-cta { background: var(--black); color: var(--white); padding: 8px 20px; border-radius: 100px; font-size: 13px; border: none; cursor: pointer; transition: opacity 0.2s; }
   .nav-cta:hover { opacity: 0.75; }
-
-  /* HERO */
-  .hero {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 8rem 2rem 4rem;
-    position: relative;
-    overflow: hidden;
-  }
-  .hero-bg {
-    position: absolute; inset: 0;
-    background: radial-gradient(ellipse 80% 60% at 50% 40%, rgba(200,169,110,0.08) 0%, transparent 70%);
-    pointer-events: none;
-  }
-  .hero-tag {
-    display: inline-flex; align-items: center; gap: 6px;
-    font-size: 11px; font-weight: 400; letter-spacing: 0.12em;
-    text-transform: uppercase; color: var(--accent-dark);
-    border: 0.5px solid var(--accent);
-    padding: 5px 14px; border-radius: 100px;
-    margin-bottom: 2rem;
-    animation: fadeUp 0.6s ease both;
-  }
-  .hero h1 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(3rem, 7vw, 5.5rem);
-    font-weight: 300;
-    line-height: 1.05;
-    letter-spacing: -0.01em;
-    margin-bottom: 1.5rem;
-    animation: fadeUp 0.6s ease 0.1s both;
-  }
+  .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 8rem 2rem 4rem; }
+  .hero-tag { display: inline-flex; align-items: center; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-dark); border: 0.5px solid var(--accent); padding: 5px 14px; border-radius: 100px; margin-bottom: 2rem; }
+  .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 300; line-height: 1.05; margin-bottom: 1.5rem; }
   .hero h1 em { font-style: italic; color: var(--accent-dark); }
-  .hero-sub {
-    font-size: 16px; color: var(--gray);
-    max-width: 480px; margin: 0 auto 2.5rem;
-    animation: fadeUp 0.6s ease 0.2s both;
-  }
-  .hero-btns {
-    display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;
-    animation: fadeUp 0.6s ease 0.3s both;
-  }
-  .btn-primary {
-    background: var(--black); color: var(--white);
-    padding: 14px 32px; border-radius: 100px;
-    font-size: 14px; font-weight: 400; letter-spacing: 0.03em;
-    border: none; cursor: pointer; transition: opacity 0.2s;
-    text-decoration: none; display: inline-block;
-  }
+  .hero-sub { font-size: 16px; color: var(--gray); max-width: 480px; margin: 0 auto 2.5rem; }
+  .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn-primary { background: var(--black); color: var(--white); padding: 14px 32px; border-radius: 100px; font-size: 14px; border: none; cursor: pointer; transition: opacity 0.2s; text-decoration: none; display: inline-block; font-family: 'Outfit', sans-serif; }
   .btn-primary:hover { opacity: 0.8; }
-  .btn-secondary {
-    background: transparent; color: var(--black);
-    padding: 14px 32px; border-radius: 100px;
-    font-size: 14px; font-weight: 400;
-    border: 0.5px solid var(--black); cursor: pointer;
-    transition: all 0.2s; text-decoration: none; display: inline-block;
-  }
+  .btn-secondary { background: transparent; color: var(--black); padding: 14px 32px; border-radius: 100px; font-size: 14px; border: 0.5px solid var(--black); cursor: pointer; transition: all 0.2s; text-decoration: none; display: inline-block; }
   .btn-secondary:hover { background: var(--black); color: var(--white); }
-  .hero-stats {
-    display: flex; gap: 3rem; justify-content: center;
-    margin-top: 4rem; padding-top: 3rem;
-    border-top: 0.5px solid var(--border);
-    animation: fadeUp 0.6s ease 0.4s both;
-    flex-wrap: wrap;
-  }
+  .hero-stats { display: flex; gap: 3rem; justify-content: center; margin-top: 4rem; padding-top: 3rem; border-top: 0.5px solid var(--border); flex-wrap: wrap; }
   .stat { text-align: center; }
-  .stat-num {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2rem; font-weight: 300; color: var(--black);
-    display: block;
-  }
+  .stat-num { font-family: 'Cormorant Garamond', serif; font-size: 2rem; font-weight: 300; display: block; }
   .stat-label { font-size: 12px; color: var(--gray); letter-spacing: 0.06em; }
-
-  /* GENERATOR SECTION */
-  #generateur {
-    padding: 6rem 2rem;
-    background: var(--cream);
-  }
-  .section-header {
-    text-align: center; margin-bottom: 3rem;
-  }
-  .section-tag {
-    font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--accent-dark); margin-bottom: 1rem; display: block;
-  }
-  .section-header h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 300; line-height: 1.1;
-  }
-  .generator-wrap {
-    max-width: 720px; margin: 0 auto;
-    background: var(--white);
-    border-radius: 20px;
-    border: 0.5px solid var(--border);
-    overflow: hidden;
-  }
+  #generateur { padding: 6rem 2rem; background: var(--cream); }
+  .section-header { text-align: center; margin-bottom: 3rem; }
+  .section-tag { font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-dark); margin-bottom: 1rem; display: block; }
+  .section-header h2 { font-family: 'Cormorant Garamond', serif; font-size: clamp(2rem, 4vw, 3rem); font-weight: 300; }
+  .generator-wrap { max-width: 720px; margin: 0 auto; background: var(--white); border-radius: 20px; border: 0.5px solid var(--border); overflow: hidden; }
   .gen-body { padding: 2.5rem; }
-  .form-grid {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
-    margin-bottom: 16px;
-  }
+  .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
   .form-group { display: flex; flex-direction: column; gap: 6px; }
   .form-group.full { grid-column: 1 / -1; }
-  .form-group label {
-    font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
-    color: var(--gray); font-weight: 400;
-  }
-  .form-group input,
-  .form-group select,
-  .form-group textarea {
-    font-family: 'Outfit', sans-serif;
-    font-size: 14px; font-weight: 300;
-    padding: 10px 14px;
-    border: 0.5px solid var(--light-gray);
-    border-radius: 10px;
-    background: var(--cream);
-    color: var(--black);
-    width: 100%; outline: none;
-    transition: border-color 0.2s;
-    appearance: none;
-  }
-  .form-group input:focus,
-  .form-group select:focus,
-  .form-group textarea:focus { border-color: var(--accent); }
+  .form-group label { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray); }
+  .form-group input, .form-group select, .form-group textarea { font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 300; padding: 10px 14px; border: 0.5px solid var(--light-gray); border-radius: 10px; background: var(--cream); color: var(--black); width: 100%; outline: none; transition: border-color 0.2s; appearance: none; }
+  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--accent); }
   .form-group textarea { resize: vertical; min-height: 90px; }
   .pills { display: flex; flex-wrap: wrap; gap: 8px; }
-  .pill {
-    padding: 6px 16px; border-radius: 100px;
-    border: 0.5px solid var(--light-gray);
-    font-size: 12px; cursor: pointer; transition: all 0.15s;
-    background: transparent; color: var(--gray);
-    font-family: 'Outfit', sans-serif;
-  }
-  .pill:hover, .pill.active {
-    border-color: var(--accent);
-    background: rgba(200,169,110,0.1);
-    color: var(--accent-dark);
-  }
-  .divider {
-    height: 0.5px; background: var(--border);
-    margin: 1.5rem 0;
-  }
-  .gen-btn {
-    width: 100%; padding: 16px;
-    background: var(--black); color: var(--white);
-    border: none; border-radius: 12px;
-    font-family: 'Outfit', sans-serif;
-    font-size: 15px; font-weight: 400;
-    cursor: pointer; transition: opacity 0.2s;
-    letter-spacing: 0.03em; margin-top: 8px;
-  }
+  .pill { padding: 6px 16px; border-radius: 100px; border: 0.5px solid var(--light-gray); font-size: 12px; cursor: pointer; transition: all 0.15s; background: transparent; color: var(--gray); font-family: 'Outfit', sans-serif; }
+  .pill:hover, .pill.active { border-color: var(--accent); background: rgba(200,169,110,0.1); color: var(--accent-dark); }
+  .divider { height: 0.5px; background: var(--border); margin: 1.5rem 0; }
+  .gen-btn { width: 100%; padding: 16px; background: var(--black); color: var(--white); border: none; border-radius: 12px; font-family: 'Outfit', sans-serif; font-size: 15px; cursor: pointer; transition: opacity 0.2s; margin-top: 8px; }
   .gen-btn:hover { opacity: 0.8; }
   .gen-btn:disabled { opacity: 0.4; cursor: not-allowed; }
-
-  /* RESULT */
-  .result-wrap {
-    border-top: 0.5px solid var(--border);
-    padding: 2rem 2.5rem;
-    display: none;
-    background: var(--cream);
-  }
-  .result-header {
-    display: flex; justify-content: space-between;
-    align-items: center; margin-bottom: 1rem;
-  }
-  .result-label {
-    font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;
-    color: var(--gray);
-  }
+  .result-wrap { border-top: 0.5px solid var(--border); padding: 2rem 2.5rem; display: none; background: var(--cream); }
+  .result-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
+  .result-label { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray); }
   .word-count { font-size: 12px; color: var(--gray); }
-  .result-text {
-    font-size: 15px; line-height: 1.8;
-    color: var(--black); white-space: pre-wrap;
-    font-weight: 300; min-height: 80px;
-  }
-  .result-actions {
-    display: flex; gap: 10px; margin-top: 1.5rem; flex-wrap: wrap;
-  }
-  .act-btn {
-    padding: 9px 20px; border-radius: 100px;
-    font-family: 'Outfit', sans-serif; font-size: 13px;
-    border: 0.5px solid var(--light-gray);
-    background: var(--white); color: var(--black);
-    cursor: pointer; transition: all 0.15s;
-  }
+  .result-text { font-size: 15px; line-height: 1.8; color: var(--black); white-space: pre-wrap; font-weight: 300; min-height: 80px; }
+  .result-actions { display: flex; gap: 10px; margin-top: 1.5rem; flex-wrap: wrap; }
+  .act-btn { padding: 9px 20px; border-radius: 100px; font-family: 'Outfit', sans-serif; font-size: 13px; border: 0.5px solid var(--light-gray); background: var(--white); color: var(--black); cursor: pointer; transition: all 0.15s; }
   .act-btn:hover { border-color: var(--black); }
-  .act-btn.dark {
-    background: var(--black); color: var(--white);
-    border-color: transparent;
-  }
-  .act-btn.dark:hover { opacity: 0.8; }
-  .spinner {
-    display: inline-block; width: 14px; height: 14px;
-    border: 2px solid rgba(255,255,255,0.3);
-    border-top-color: white; border-radius: 50%;
-    animation: spin 0.7s linear infinite;
-    vertical-align: middle; margin-right: 8px;
-  }
+  .act-btn.dark { background: var(--black); color: var(--white); border-color: transparent; }
+  .spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid rgba(255,255,255,0.3); border-top-color: white; border-radius: 50%; animation: spin 0.7s linear infinite; vertical-align: middle; margin-right: 8px; }
   @keyframes spin { to { transform: rotate(360deg); } }
-
-  /* PRICING */
-  #tarifs {
-    padding: 6rem 2rem;
-  }
-  .pricing-grid {
-    display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 16px; max-width: 800px; margin: 3rem auto 0;
-  }
-  .price-card {
-    border: 0.5px solid var(--border);
-    border-radius: 20px; padding: 2rem;
-    background: var(--white);
-    transition: transform 0.2s;
-  }
+  #tarifs { padding: 6rem 2rem; }
+  .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; max-width: 800px; margin: 3rem auto 0; }
+  .price-card { border: 0.5px solid var(--border); border-radius: 20px; padding: 2rem; background: var(--white); transition: transform 0.2s; }
   .price-card:hover { transform: translateY(-4px); }
-  .price-card.featured {
-    background: var(--black); color: var(--white);
-    border-color: var(--black);
-  }
-  .price-name {
-    font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;
-    color: var(--gray); margin-bottom: 1rem;
-  }
+  .price-card.featured { background: var(--black); color: var(--white); border-color: var(--black); }
+  .price-name { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray); margin-bottom: 1rem; }
   .price-card.featured .price-name { color: rgba(255,255,255,0.5); }
-  .price-amount {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 3rem; font-weight: 300; line-height: 1;
-    margin-bottom: 0.25rem;
-  }
+  .price-amount { font-family: 'Cormorant Garamond', serif; font-size: 3rem; font-weight: 300; line-height: 1; margin-bottom: 0.25rem; }
   .price-period { font-size: 12px; color: var(--gray); margin-bottom: 1.5rem; }
   .price-card.featured .price-period { color: rgba(255,255,255,0.5); }
   .price-features { list-style: none; margin-bottom: 2rem; }
-  .price-features li {
-    font-size: 13px; padding: 6px 0;
-    border-bottom: 0.5px solid var(--border);
-    display: flex; align-items: center; gap: 8px;
-  }
+  .price-features li { font-size: 13px; padding: 6px 0; border-bottom: 0.5px solid var(--border); display: flex; align-items: center; gap: 8px; }
   .price-card.featured .price-features li { border-color: rgba(255,255,255,0.1); }
   .price-features li::before { content: '—'; color: var(--accent); font-size: 12px; }
-  .price-btn {
-    width: 100%; padding: 12px;
-    border-radius: 100px; font-family: 'Outfit', sans-serif;
-    font-size: 13px; cursor: pointer; transition: all 0.2s;
-    border: 0.5px solid var(--black); background: transparent;
-    color: var(--black); font-weight: 400;
-  }
-  .price-card.featured .price-btn {
-    background: var(--white); color: var(--black); border-color: transparent;
-  }
+  .price-btn { width: 100%; padding: 12px; border-radius: 100px; font-family: 'Outfit', sans-serif; font-size: 13px; cursor: pointer; transition: all 0.2s; border: 0.5px solid var(--black); background: transparent; color: var(--black); }
+  .price-card.featured .price-btn { background: var(--white); color: var(--black); border-color: transparent; }
   .price-btn:hover { background: var(--black); color: var(--white); }
-  .price-card.featured .price-btn:hover { opacity: 0.85; }
-
-  /* FOOTER */
-  footer {
-    padding: 3rem 2rem;
-    border-top: 0.5px solid var(--border);
-    display: flex; justify-content: space-between; align-items: center;
-    flex-wrap: wrap; gap: 1rem;
-  }
-  .footer-logo {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 18px; color: var(--black);
-  }
+  footer { padding: 3rem 2rem; border-top: 0.5px solid var(--border); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; }
+  .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 18px; }
   .footer-logo span { color: var(--accent); }
   .footer-note { font-size: 12px; color: var(--gray); }
-
-  @keyframes fadeUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
-  @media (max-width: 600px) {
-    nav { padding: 1rem 1.5rem; }
-    .form-grid { grid-template-columns: 1fr; }
-    .gen-body { padding: 1.5rem; }
-    .result-wrap { padding: 1.5rem; }
-    .hero-stats { gap: 2rem; }
-  }
+  @media (max-width: 600px) { nav { padding: 1rem 1.5rem; } .form-grid { grid-template-columns: 1fr; } .gen-body { padding: 1.5rem; } .result-wrap { padding: 1.5rem; } }
 </style>
 </head>
 <body>
-
 <nav>
   <a href="#" class="logo">Gen<span>Bio</span></a>
   <button class="nav-cta" onclick="document.getElementById('generateur').scrollIntoView({behavior:'smooth'})">Essayer gratuitement</button>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
-  <div class="hero-bg"></div>
   <div class="hero-tag">Propulsé par Claude AI</div>
   <h1>Votre bio professionnelle,<br><em>réinventée</em> en 10 secondes</h1>
-  <p class="hero-sub">Fini les heures à chercher vos mots. GenBio génère une bio percutante pour LinkedIn, votre portfolio ou votre CV — en quelques clics.</p>
+  <p class="hero-sub">Fini les heures à chercher vos mots. GenBio génère une bio percutante pour LinkedIn, votre portfolio ou votre CV.</p>
   <div class="hero-btns">
     <button class="btn-primary" onclick="document.getElementById('generateur').scrollIntoView({behavior:'smooth'})">Générer ma bio gratuitement</button>
     <a href="#tarifs" class="btn-secondary">Voir les tarifs</a>
   </div>
   <div class="hero-stats">
-    <div class="stat">
-      <span class="stat-num">10s</span>
-      <span class="stat-label">Temps de génération</span>
-    </div>
-    <div class="stat">
-      <span class="stat-num">5</span>
-      <span class="stat-label">Tons disponibles</span>
-    </div>
-    <div class="stat">
-      <span class="stat-num">100%</span>
-      <span class="stat-label">Personnalisé pour vous</span>
-    </div>
+    <div class="stat"><span class="stat-num">10s</span><span class="stat-label">Temps de génération</span></div>
+    <div class="stat"><span class="stat-num">5</span><span class="stat-label">Tons disponibles</span></div>
+    <div class="stat"><span class="stat-num">100%</span><span class="stat-label">Personnalisé</span></div>
   </div>
 </section>
 
-<!-- GENERATOR -->
 <section id="generateur">
   <div class="section-header">
     <span class="section-tag">Le générateur</span>
     <h2>Parlez-nous de vous,<br>on fait le reste</h2>
   </div>
-
   <div class="generator-wrap">
     <div class="gen-body">
       <div class="form-grid">
-        <div class="form-group">
-          <label>Prénom & nom</label>
-          <input type="text" id="name" placeholder="Marie Dupont"/>
-        </div>
-        <div class="form-group">
-          <label>Titre / Métier</label>
-          <input type="text" id="title" placeholder="Designer UX Freelance"/>
-        </div>
-        <div class="form-group">
-          <label>Secteur</label>
+        <div class="form-group"><label>Prénom & nom</label><input type="text" id="name" placeholder="Marie Dupont"/></div>
+        <div class="form-group"><label>Titre / Métier</label><input type="text" id="title" placeholder="Designer UX Freelance"/></div>
+        <div class="form-group"><label>Secteur</label>
           <select id="sector">
             <option value="">Choisir...</option>
-            <option>Tech & Startups</option>
-            <option>Design & Créatif</option>
-            <option>Finance & Conseil</option>
-            <option>Marketing & Communication</option>
-            <option>Santé & Bien-être</option>
-            <option>Éducation & Coaching</option>
-            <option>Juridique & RH</option>
-            <option>Autre</option>
+            <option>Tech & Startups</option><option>Design & Créatif</option>
+            <option>Finance & Conseil</option><option>Marketing & Communication</option>
+            <option>Santé & Bien-être</option><option>Éducation & Coaching</option>
+            <option>Juridique & RH</option><option>Autre</option>
           </select>
         </div>
-        <div class="form-group">
-          <label>Expérience</label>
+        <div class="form-group"><label>Expérience</label>
           <select id="exp">
             <option value="">Choisir...</option>
-            <option>Moins de 2 ans</option>
-            <option>2 à 5 ans</option>
-            <option>5 à 10 ans</option>
-            <option>Plus de 10 ans</option>
+            <option>Moins de 2 ans</option><option>2 à 5 ans</option>
+            <option>5 à 10 ans</option><option>Plus de 10 ans</option>
           </select>
         </div>
-        <div class="form-group full">
-          <label>Compétences clés & réalisations</label>
+        <div class="form-group full"><label>Compétences clés & réalisations</label>
           <textarea id="skills" placeholder="Ex : spécialisée en UX mobile, j'ai aidé 30+ startups à doubler leur taux de conversion..."></textarea>
         </div>
       </div>
-
       <div class="divider"></div>
-
       <div class="form-group" style="margin-bottom:16px">
         <label>Plateforme cible</label>
         <div class="pills" id="platform-pills">
@@ -438,7 +155,6 @@
           <button class="pill" data-val="Twitter/X">Twitter/X</button>
         </div>
       </div>
-
       <div class="form-group" style="margin-bottom:16px">
         <label>Ton souhaité</label>
         <div class="pills" id="tone-pills">
@@ -449,7 +165,6 @@
           <button class="pill" data-val="Minimaliste">Minimaliste</button>
         </div>
       </div>
-
       <div class="form-group" style="margin-bottom:20px">
         <label>Longueur</label>
         <div class="pills" id="length-pills">
@@ -458,10 +173,8 @@
           <button class="pill" data-val="long (200 mots)">Long — 200 mots</button>
         </div>
       </div>
-
       <button class="gen-btn" id="gen-btn" onclick="generate()">Générer ma bio</button>
     </div>
-
     <div class="result-wrap" id="result-wrap">
       <div class="result-header">
         <span class="result-label">Votre bio générée</span>
@@ -476,7 +189,6 @@
   </div>
 </section>
 
-<!-- PRICING -->
 <section id="tarifs">
   <div class="section-header">
     <span class="section-tag">Tarifs</span>
@@ -489,7 +201,7 @@
       <div class="price-period">pour toujours</div>
       <ul class="price-features">
         <li>3 générations par jour</li>
-        <li>Tous les tons disponibles</li>
+        <li>Tous les tons</li>
         <li>Toutes les plateformes</li>
       </ul>
       <button class="price-btn" onclick="document.getElementById('generateur').scrollIntoView({behavior:'smooth'})">Commencer</button>
@@ -500,11 +212,11 @@
       <div class="price-period">paiement unique</div>
       <ul class="price-features">
         <li>Générations illimitées</li>
-        <li>Tous les tons disponibles</li>
+        <li>Tous les tons</li>
         <li>Toutes les plateformes</li>
-        <li>Accès aux nouvelles fonctions</li>
+        <li>Nouvelles fonctions incluses</li>
       </ul>
-      <button class="price-btn" onclick="alert('Lien de paiement bientôt disponible !')">Obtenir l\'accès</button>
+      <button class="price-btn" onclick="window.open('LIEN_GUMROAD_ICI','_blank')">Obtenir l'accès</button>
     </div>
     <div class="price-card">
       <div class="price-name">Pro</div>
@@ -516,7 +228,7 @@
         <li>Historique des bios</li>
         <li>Support prioritaire</li>
       </ul>
-      <button class="price-btn" onclick="alert('Lien de paiement bientôt disponible !')">S\'abonner</button>
+      <button class="price-btn" onclick="window.open('LIEN_GUMROAD_ICI','_blank')">S'abonner</button>
     </div>
   </div>
 </section>
@@ -528,17 +240,14 @@
 
 <script>
   let platform = 'LinkedIn', tone = 'Professionnel', length = 'moyen (100 mots)';
-
-  function initPills(groupId, onSelect) {
-    document.querySelectorAll('#' + groupId + ' .pill').forEach(btn => {
-      btn.addEventListener('click', () => {
-        document.querySelectorAll('#' + groupId + ' .pill').forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        onSelect(btn.dataset.val);
+  function initPills(id, cb) {
+    document.querySelectorAll('#'+id+' .pill').forEach(b => {
+      b.addEventListener('click', () => {
+        document.querySelectorAll('#'+id+' .pill').forEach(x => x.classList.remove('active'));
+        b.classList.add('active'); cb(b.dataset.val);
       });
     });
   }
-
   initPills('platform-pills', v => platform = v);
   initPills('tone-pills', v => tone = v);
   initPills('length-pills', v => length = v);
@@ -549,85 +258,45 @@
     const sector = document.getElementById('sector').value;
     const exp = document.getElementById('exp').value;
     const skills = document.getElementById('skills').value.trim();
-
-    if (!name && !title && !skills) {
-      document.getElementById('name').focus();
-      return;
-    }
+    if (!name && !title && !skills) { document.getElementById('name').focus(); return; }
 
     const btn = document.getElementById('gen-btn');
     btn.disabled = true;
     btn.innerHTML = '<span class="spinner"></span>Génération en cours...';
-
     const rw = document.getElementById('result-wrap');
     const rt = document.getElementById('result-text');
     rw.style.display = 'block';
     rt.textContent = '';
 
-    const prompt = `Tu es un expert en personal branding et copywriting francophone. Génère une bio professionnelle en français pour :
-
-Nom : ${name || 'Non précisé'}
-Titre : ${title || 'Non précisé'}
-Secteur : ${sector || 'Non précisé'}
-Expérience : ${exp || 'Non précisée'}
-Compétences et réalisations : ${skills || 'Non précisées'}
-Plateforme : ${platform}
-Ton : ${tone}
-Longueur : ${length}
-
-Règles :
-- Commence directement par la bio, sans introduction ni guillemets
-- Première ligne = accroche forte ou le nom
-- Adapte le style à ${platform}
-- Ton ${tone}
-- Longueur ${length}
-- Pas de hashtags sauf Instagram
-- Termine par un élément mémorable ou CTA subtil`;
+    const prompt = `Tu es un expert en personal branding francophone. Génère une bio professionnelle en français pour :
+Nom : ${name||'Non précisé'}, Titre : ${title||'Non précisé'}, Secteur : ${sector||'Non précisé'}, Expérience : ${exp||'Non précisée'}, Compétences : ${skills||'Non précisées'}
+Plateforme : ${platform}, Ton : ${tone}, Longueur : ${length}
+Règles : commence directement par la bio, première ligne = accroche forte, adapte à ${platform}, longueur ${length}, pas de hashtags sauf Instagram.`;
 
     try {
-      const resp = await fetch('https://api.anthropic.com/v1/messages', {
+      const resp = await fetch('/api/generate', {
         method: 'POST',
-        headers: { "Content-Type": "application/json", "x-api-key": "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", "anthropic-version": "2023-06-01", "anthropic-dangerous-direct-browser-access": "true" },
-        body: JSON.stringify({
-          model: 'claude-sonnet-4-20250514',
-          max_tokens: 1000,
-          stream: true,
-          messages: [{ role: 'user', content: prompt }]
-        })
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ model: 'claude-sonnet-4-20250514', max_tokens: 1000, messages: [{ role: 'user', content: prompt }] })
       });
-
-      const reader = resp.body.getReader();
-      const decoder = new TextDecoder();
-      let full = '';
-      while (true) {
-        const { done, value } = await reader.read();
-        if (done) break;
-        for (const line of decoder.decode(value).split('\n')) {
-          if (!line.startsWith('data: ')) continue;
-          const d = line.slice(6);
-          if (d === '[DONE]') continue;
-          try {
-            const p = JSON.parse(d);
-            if (p.type === 'content_block_delta' && p.delta?.text) {
-              full += p.delta.text;
-              rt.textContent = full;
-            }
-          } catch {}
-        }
+      const data = await resp.json();
+      if (data.content && data.content[0]) {
+        rt.textContent = data.content[0].text;
+        const words = data.content[0].text.trim().split(/\s+/).length;
+        document.getElementById('word-count').textContent = words + ' mots';
+      } else {
+        rt.textContent = 'Erreur : ' + (data.error?.message || JSON.stringify(data));
       }
-      const words = full.trim().split(/\s+/).length;
-      document.getElementById('word-count').textContent = words + ' mots';
-    } catch (e) {
-      rt.textContent = 'Une erreur est survenue. Veuillez réessayer.';
+    } catch(e) {
+      rt.textContent = 'Erreur de connexion. Veuillez réessayer.';
     }
-
     btn.disabled = false;
     btn.innerHTML = 'Générer ma bio';
   }
 
   function copyBio() {
     const t = document.getElementById('result-text').textContent;
-    navigator.clipboard.writeText(t).catch(() => {});
+    navigator.clipboard.writeText(t).catch(()=>{});
     const b = event.target;
     b.textContent = 'Copié !';
     setTimeout(() => b.textContent = 'Copier', 2000);
