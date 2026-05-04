@@ -14,7 +14,6 @@
   .logo { font-family: 'Cormorant Garamond', serif; font-size: 22px; font-weight: 400; color: var(--black); text-decoration: none; }
   .logo span { color: var(--accent); }
   .nav-cta { background: var(--black); color: var(--white); padding: 8px 20px; border-radius: 100px; font-size: 13px; border: none; cursor: pointer; transition: opacity 0.2s; }
-  .nav-cta:hover { opacity: 0.75; }
   .hero { min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; padding: 8rem 2rem 4rem; }
   .hero-tag { display: inline-flex; align-items: center; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-dark); border: 0.5px solid var(--accent); padding: 5px 14px; border-radius: 100px; margin-bottom: 2rem; }
   .hero h1 { font-family: 'Cormorant Garamond', serif; font-size: clamp(3rem, 7vw, 5.5rem); font-weight: 300; line-height: 1.05; margin-bottom: 1.5rem; }
@@ -22,7 +21,6 @@
   .hero-sub { font-size: 16px; color: var(--gray); max-width: 480px; margin: 0 auto 2.5rem; }
   .hero-btns { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
   .btn-primary { background: var(--black); color: var(--white); padding: 14px 32px; border-radius: 100px; font-size: 14px; border: none; cursor: pointer; transition: opacity 0.2s; text-decoration: none; display: inline-block; font-family: 'Outfit', sans-serif; }
-  .btn-primary:hover { opacity: 0.8; }
   .btn-secondary { background: transparent; color: var(--black); padding: 14px 32px; border-radius: 100px; font-size: 14px; border: 0.5px solid var(--black); cursor: pointer; transition: all 0.2s; text-decoration: none; display: inline-block; }
   .btn-secondary:hover { background: var(--black); color: var(--white); }
   .hero-stats { display: flex; gap: 3rem; justify-content: center; margin-top: 4rem; padding-top: 3rem; border-top: 0.5px solid var(--border); flex-wrap: wrap; }
@@ -40,14 +38,12 @@
   .form-group.full { grid-column: 1 / -1; }
   .form-group label { font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gray); }
   .form-group input, .form-group select, .form-group textarea { font-family: 'Outfit', sans-serif; font-size: 14px; font-weight: 300; padding: 10px 14px; border: 0.5px solid var(--light-gray); border-radius: 10px; background: var(--cream); color: var(--black); width: 100%; outline: none; transition: border-color 0.2s; appearance: none; }
-  .form-group input:focus, .form-group select:focus, .form-group textarea:focus { border-color: var(--accent); }
   .form-group textarea { resize: vertical; min-height: 90px; }
   .pills { display: flex; flex-wrap: wrap; gap: 8px; }
   .pill { padding: 6px 16px; border-radius: 100px; border: 0.5px solid var(--light-gray); font-size: 12px; cursor: pointer; transition: all 0.15s; background: transparent; color: var(--gray); font-family: 'Outfit', sans-serif; }
   .pill:hover, .pill.active { border-color: var(--accent); background: rgba(200,169,110,0.1); color: var(--accent-dark); }
   .divider { height: 0.5px; background: var(--border); margin: 1.5rem 0; }
   .gen-btn { width: 100%; padding: 16px; background: var(--black); color: var(--white); border: none; border-radius: 12px; font-family: 'Outfit', sans-serif; font-size: 15px; cursor: pointer; transition: opacity 0.2s; margin-top: 8px; }
-  .gen-btn:hover { opacity: 0.8; }
   .gen-btn:disabled { opacity: 0.4; cursor: not-allowed; }
   .result-wrap { border-top: 0.5px solid var(--border); padding: 2rem 2.5rem; display: none; background: var(--cream); }
   .result-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; }
@@ -55,8 +51,7 @@
   .word-count { font-size: 12px; color: var(--gray); }
   .result-text { font-size: 15px; line-height: 1.8; color: var(--black); white-space: pre-wrap; font-weight: 300; min-height: 80px; }
   .result-actions { display: flex; gap: 10px; margin-top: 1.5rem; flex-wrap: wrap; }
-  .act-btn { padding: 9px 20px; border-radius: 100px; font-family: 'Outfit', sans-serif; font-size: 13px; border: 0.5px solid var(--light-gray); background: var(--white); color: var(--black); cursor: pointer; transition: all 0.15s; }
-  .act-btn:hover { border-color: var(--black); }
+  .act-btn { padding: 9px 20px; border-radius: 100px; font-family: 'Outfit', sans-serif; font-size: 13px; border: 0.5px solid var(--light-gray); background: var(--white); color: var(--black); cursor: pointer; }
   .act-btn.dark { background: var(--black); color: var(--white); border-color: transparent; }
   .spinner { display: inline-block; width: 14px; height: 14px; border: 2px solid rgba(255,255,255,0.3); border-top-color: white; border-radius: 50%; animation: spin 0.7s linear infinite; vertical-align: middle; margin-right: 8px; }
   @keyframes spin { to { transform: rotate(360deg); } }
@@ -204,7 +199,7 @@
         <li>Toutes les plateformes</li>
         <li>Nouvelles fonctions incluses</li>
       </ul>
-      <button class="price-btn" onclick="window.open('https://simonrendezvous.gumroad.com/l/fycutw','_blank')">Obtenir l'accès</button>
+      <button class="price-btn" onclick="window.open('https://genbio.gumroad.com/l/fycutw','_blank')">Obtenir l'accès</button>
     </div>
     <div class="price-card">
       <div class="price-name">Pro</div>
@@ -216,7 +211,7 @@
         <li>Historique des bios</li>
         <li>Support prioritaire</li>
       </ul>
-      <button class="price-btn" onclick="window.open('https://simonrendezvous.gumroad.com/l/fycutw','_blank')">S'abonner</button>
+      <button class="price-btn" onclick="window.open('https://genbio.gumroad.com/l/dovsc','_blank')">S'abonner</button>
     </div>
   </div>
 </section>
